@@ -71,7 +71,7 @@ public final class ConditionalIdleKick extends JavaPlugin implements Listener {
     public void onEnable() {
         saveDefaultConfig();
 
-        maxIdleTime = getConfig().getInt("max-idle-time") * 1000L;
+        maxIdleTime = getConfig().getInt("max-idle-time");
         kickPlayerCount = getConfig().getInt("kick-player-count");
         int kickUpdatePeriod = getConfig().getInt("kick-update-period");
 
@@ -95,8 +95,8 @@ public final class ConditionalIdleKick extends JavaPlugin implements Listener {
         essentials = (Essentials) plugin;
 
         getLogger().info("ConditionalIdleKick is loaded: Checking every " + kickUpdatePeriod
-                + " ticks to kick AFK players if idle time is more than " + maxIdleTime
-                + " when player count more than " + kickPlayerCount + " or server TPS less than " + kickTps);
+                + " ticks to kick AFK players if idle time is more than " + maxIdleTime / 1000
+                + " seconds, when player count more than " + kickPlayerCount + " or server TPS less than " + kickTps);
 
         Bukkit.getPluginManager().registerEvents(this, this);
         new BukkitRunnable() {
