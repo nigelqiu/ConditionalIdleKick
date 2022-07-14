@@ -57,11 +57,13 @@ public final class ConditionalIdleKick extends JavaPlugin implements Listener {
             Map.Entry<Long, User> entry = it.next();
             if (kc == KickCriteria.SERVER_FULL) {
                 entry.getValue().getBase().kick(kickFullMsg);
-                getLogger().info("Kicking " + entry.getValue().getName() + " because server is full.");
+                getLogger().info("Kicking " + entry.getValue().getName() + " because server is full. Idle time: "
+                        + entry.getKey() / 1000 + " seconds");
             } else {
                 assert plugin != null;
                 Bukkit.getScheduler().runTask(plugin, () -> entry.getValue().getBase().kick(kickMsg));
-                getLogger().info("Kicking " + entry.getValue().getName() + " because server is busy.");
+                getLogger().info("Kicking " + entry.getValue().getName() + " because server is busy. Idle time: "
+                        + entry.getKey() / 1000 + " seconds");
             }
             i++;
         }
