@@ -1,0 +1,7 @@
+name: ConditionalIdleKick
+version: '${version}'
+main: com.intellyspark.conditionalidlekick.ConditionalIdleKick
+api-version: 1.19
+author: intellyspark@gmail.com
+depend: [ Essentials ]
+description: Kicks AFK players if server conditions are satisfied

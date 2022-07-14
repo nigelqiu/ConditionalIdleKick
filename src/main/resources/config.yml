@@ -1,0 +1,20 @@
+#Period (in ticks) between when the plugin checks for kick conditions
+kick-update-period: 100
+#Minimum AFK idle time (in seconds) before player is eligible to be kicked
+max-idle-time: 300
+#Number of AFK players to kick per update cycle if needed (set to -1 to kick all idle players)
+kick-number: -1
+#Kick AFK players when total player count is greater than this value
+kick-player-count: 8
+#Kick AFK players when server TPS is less than this value
+kick-tps: 18.50
+#Message displayed for kicked AFK players
+kick-message: "You have been kicked because the server is too busy."
+#Kick message color
+kick-message-color: 0xFF5555
+#Kick AFK players when server is full
+kick-afk-players-when-server-is-full: true
+#Message displayed for kicked AFK players when server is full
+kick-message-server-full: "You have been kicked because the server is full."
+#Kick message for server full color
+kick-message-server-full-color: 0xFF5555
