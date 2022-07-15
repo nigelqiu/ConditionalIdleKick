@@ -9,12 +9,12 @@ kick-player-count: 8
 #Kick AFK players when server TPS is less than this value
 kick-tps: 18.50
 #Message displayed for kicked AFK players
-kick-message: "You have been kicked because the server is too busy."
+kick-message: "You have been kicked while AFK because the server is too busy."
 #Kick message color
 kick-message-color: 0xFF5555
 #Kick AFK players when server is full
 kick-afk-players-when-server-is-full: true
 #Message displayed for kicked AFK players when server is full
-kick-message-server-full: "You have been kicked because the server is full."
+kick-message-server-full: "You have been kicked while AFK because the server is full."
 #Kick message for server full color
 kick-message-server-full-color: 0xFF5555
