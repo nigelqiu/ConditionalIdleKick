@@ -45,7 +45,7 @@ public final class ConditionalIdleKick extends JavaPlugin implements Listener {
         long currentTime = System.currentTimeMillis();
         Map<Long, User> userIdleTimes = new TreeMap<>(Collections.reverseOrder());
         essentials.getOnlineUsers().forEach((user) -> {
-            if (user.isAfk()) {
+            if (user.isAfk() && !user.getBase().hasPermission("conditionalidlekick.exempt")) {
                 if ((currentTime - user.getAfkSince()) > maxIdleTime) {
                     userIdleTimes.put(currentTime - user.getAfkSince(), user);
                 }

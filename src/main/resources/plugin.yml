@@ -5,3 +5,7 @@ api-version: 1.19
 author: intellyspark@gmail.com
 depend: [ Essentials ]
 description: Kicks AFK players if server conditions are satisfied
+permissions:
+  conditionalidlekick.exempt:
+    description: Forces the plugin to ignore an AFK player with this permission
+    default: op
