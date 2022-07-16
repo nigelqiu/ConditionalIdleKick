@@ -38,7 +38,7 @@ public final class ConditionalIdleKick extends JavaPlugin implements Listener {
     private TextComponent kickFullMsg;
 
     private boolean checkKickConditions() {
-        return Bukkit.getOnlinePlayers().size() > kickPlayerCount || essentials.getTimer().getAverageTPS() < kickTps;
+        return Bukkit.getOnlinePlayers().size() > kickPlayerCount || Bukkit.getServer().getTPS()[0] < kickTps;
     }
 
     private void runKickSelector(KickCriteria kc) {
