@@ -73,7 +73,7 @@ public final class ConditionalIdleKick extends JavaPlugin implements Listener {
     public void onEnable() {
         saveDefaultConfig();
 
-        maxIdleTime = getConfig().getInt("max-idle-time");
+        maxIdleTime = getConfig().getInt("max-idle-time") * 1000L;
         kickPlayerCount = getConfig().getInt("kick-player-count");
         int kickUpdatePeriod = getConfig().getInt("kick-update-period");
 
