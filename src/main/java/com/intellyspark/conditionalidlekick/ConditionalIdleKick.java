@@ -19,21 +19,13 @@ import java.util.*;
 
 public final class ConditionalIdleKick extends JavaPlugin implements Listener {
 
-    enum KickCriteria {
-        GENERAL,
-        SERVER_FULL
-    }
-
-    private Essentials essentials;
     private final Plugin plugin = Bukkit.getPluginManager().getPlugin("Essentials");
-
+    private Essentials essentials;
     private long maxIdleTime;
     private int kickPlayerCount;
-
     private double kickTps;
     private int kickNumber;
     private TextComponent kickMsg;
-
     private boolean kickFull;
     private TextComponent kickFullMsg;
 
@@ -126,5 +118,10 @@ public final class ConditionalIdleKick extends JavaPlugin implements Listener {
                 && Bukkit.getOnlinePlayers().size() != Bukkit.getMaxPlayers()) {
             e.setLoginResult(AsyncPlayerPreLoginEvent.Result.ALLOWED);
         }
+    }
+
+    enum KickCriteria {
+        GENERAL,
+        SERVER_FULL
     }
 }
